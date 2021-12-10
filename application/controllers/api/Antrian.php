@@ -8,10 +8,6 @@ class Antrian extends BD_Controller {
     {
         // Construct the parent class
         parent::__construct();
-        // Configure limits on our controller methods
-        // Ensure you have created the 'limits' table and enabled 'limits' within application/config/rest.php
-        $this->methods['index_get']['limit'] = 100; // 500 requests per hour per user/key
-        $this->methods['index_post']['limit'] = 50; // 100 requests per hour per user/key
         $this->load->model('m_data');
     }
 
